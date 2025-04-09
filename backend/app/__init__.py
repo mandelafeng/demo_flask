@@ -1,6 +1,6 @@
 from flask import Flask
-from config import Config
-from extensions import db, jwt
+from .config import Config
+from .extensions import db, jwt
 
 
 def create_app():
@@ -12,7 +12,7 @@ def create_app():
     jwt.init_app(app)
 
     # 注册蓝图
-    from api.v1.auth import auth_bp
+    from .api.v1.auth import auth_bp
     app.register_blueprint(auth_bp)
 
     # 创建数据库表

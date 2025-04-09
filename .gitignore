@@ -1,0 +1,14 @@
+.venv/
+# 忽略idea文件
+.idea/
+*.iml
+# frontend
+frontend/*.log
+frontend/node_modules/
+
+
+# backend
+# 忽略后端日志文件
+backend/.venv/
+# 忽略 __pycache__ 目录
+backend/__pycache__/

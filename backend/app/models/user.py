@@ -11,3 +11,11 @@ class User(db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)
+    def __repr__(self):
+        return f'<User username={self.username}, password={self.password_hash}>'
+    def to_dict(self):
+        return {
+            'id': self.id,
+            'username': self.username,
+            'password_hash': self.password_hash
+        }

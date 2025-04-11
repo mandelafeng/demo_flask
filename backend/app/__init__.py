@@ -5,8 +5,8 @@ import sys
 
 from flask import Flask, Blueprint
 from app.config import Config, blueprint_modules
-from app.error import handle_404_error, handle_500_error, handle_all_exceptions
-from app.extensions import db, jwt
+from app.common.error import handle_404_error, handle_500_error, handle_all_exceptions
+from app.common.extensions import db, jwt
 from dotenv import load_dotenv
 # 获取项目根目录的路径
 load_dotenv()
